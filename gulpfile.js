@@ -36,6 +36,21 @@ gulp.task('specificCompile', function () {
 
 })
 
+// Task for optimizing images
+gulp.task('images', function () {
+  return gulp.src(path.images)
+    .pipe(imagemin())
+    .pipe(gulp.dest(path.imageDest))
+})
+
+// Watching and live reload
+gulp.task('watch', function () {
+  gulp.watch(path.mjml), gulp.series('commonCompile', 'specificCompile', 'images');
+})
+
+// Glob Task
+gulp.task('default', gulp.series('commonCompile', 'specificCompile', 'images', 'watch'));
+
 /*
 gulp.task('compile', function () {
   return gulp.src(path.mjml)
