@@ -1,5 +1,6 @@
 # Application Emails with MJML
-![cover][src/images/cover.png]
+![Email Cover][cover]
+[cover]: src/images/cover.png "Email Cover"
 ## What is this project?
 This repository a collection of branded MJML email templates that are used across multiple applications. Many of our companies share the same messaging, so why not the same template (__albeit with a few simple style changes__)? This build let's us create common and company-specific templates without the painstaking one-off changes.
 
