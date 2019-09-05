@@ -108,23 +108,13 @@ gulp.task('images', function () {
 
 gulp.task('compile', gulp.series('common', 'specific', 'images'))
 
-// Task for optimizing images
-/*gulp.task('images', function () {
-  return gulp.src(path.images)
-    .pipe(imagemin())
-    .pipe(gulp.dest(path.imageDest))
-})
 
-// Bulk compile task
-gulp.task('compile', gulp.series('commonCompile', 'specficCompile', 'images'));
-
-// Watching and live reload
 gulp.task('watch', function () {
-  gulp.watch(path.mjml), gulp.series('commonCompile', 'specificCompile', 'images');
+  gulp.watch(path.mjml, gulp.series('compile', 'compile'));
 })
 
-// Glob Task
-gulp.task('default', gulp.series('commonCompile', 'specificCompile', 'images', 'watch'));*/
+gulp.task('default', gulp.series('compile', 'watch'));
+
 
 /*
 gulp.task('compile', function () {
