@@ -99,14 +99,14 @@ gulp.task('cleanPublic', async function () {
 
 gulp.task('clean', gulp.parallel('cleanCommon', 'cleanSpecific', 'cleanPublic'))
 
-gulp.task('compile', gulp.series('common', 'specific'))
-
 // Task for optimizing images
 gulp.task('images', function () {
   return gulp.src(path.images)
     .pipe(imagemin())
     .pipe(gulp.dest(path.imageDest))
 })
+
+gulp.task('compile', gulp.series('common', 'specific', 'images'))
 
 // Task for optimizing images
 /*gulp.task('images', function () {

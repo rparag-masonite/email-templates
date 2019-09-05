@@ -8,7 +8,7 @@
   <mj-class name="u-text--subtitle" align="center" font-size="11px" line-height="16px" font-weight="400" color="#8e8e8e" text-transform="uppercase" padding="16px 25px 0px 25px" letter-spacing="0.6px" />
   <mj-class name="u-text--multi" align="left" font-size="16px" line-height="26px" font-weight="300" color="#666666" padding="10px 25px 32px 25px" />
   <mj-class name="u-text--center" align="center" />
-  <mj-class name="u-text--footer" color="#dddddd" align="center" font-size="14px" line-height="20px" />
+  <mj-class name="u-text--footer" color="#343639" align="center" font-size="14px" line-height="20px" />
   <mj-class name="u-text--code" align="left" font-size="11px" font-family="monospace" line-height="17px" font-weight="300" color="#4b4b4b" padding="10px 25px 10px 25px" container-background-color="#343639" />
 
   <!-- Button classes -->
@@ -26,6 +26,6 @@
   <mj-body background-color="#f3f3f3"/>
 
   <mj-section background-color="#ffffff" />
-  <mj-all font-family="Montserrat, sans-serif" color="#343639" />
+  <mj-all font-family="Montserrat, sans-serif" color="#4b4b4b" />
 
 </mj-attributes>
