@@ -106,13 +106,15 @@ gulp.task('images', function () {
     .pipe(gulp.dest(path.imageDest))
 })
 
+// Bulk compile task
 gulp.task('compile', gulp.series('common', 'specific', 'images'))
 
-
+// Watch task
 gulp.task('watch', function () {
   gulp.watch(path.mjml, gulp.series('compile', 'compile'));
 })
 
+// Glob task for errything
 gulp.task('default', gulp.series('compile', 'watch'));
 
 
