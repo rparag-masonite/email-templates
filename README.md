@@ -79,7 +79,10 @@ Use the following commands to compile all of the MJML files in the `src` folder:
 gulp compile  # Compile MJML templates
 gulp images   # Optimize images
 gulp watch    # Watch all changes
+
 gulp          # Compile and watch
+
+gulp clean    # Clean all copied and compiled files
 ```
 
 #### TODO
