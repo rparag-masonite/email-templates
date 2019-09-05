@@ -22,6 +22,9 @@
   <!-- Table Classes -->
   <mj-table color="#616161" name="table" width="100%" align="center" />
 
+    <!-- Body -->
+  <mj-body background-color="#DEE5EE"/>
+
   <mj-section background-color="#ffffff" />
   <mj-all font-family="Lato, sans-serif" color="#121620" />
 

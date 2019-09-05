@@ -2,7 +2,7 @@
   <mj-head>
    <mj-include path="../header.mjml" />
   </mj-head>
-  <mj-body background-color="#DEE5EE">
+  <mj-body>
   <mj-section background-color="transparent"></mj-section>
   <mj-include path="../logo-section.mjml" />
     <mj-section mj-class="header__primary">
