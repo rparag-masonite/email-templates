@@ -24,18 +24,18 @@ const companies = [
 //                 | template.html
 
 // This task copies all of the common templates into the company-specific includes folder
-gulp.task('copyFiles', async function() {
+gulp.task('copyFilesCommon', async function() {
   companies.forEach(company => {
     return gulp
-      .src('src/common/*.mjml')
+      .src(`src/common/*.mjml`)
       .pipe(gulp.dest(`src/includes/${company}/common`))
   })
 })
 
 // This task deletes the copied common templates in the company-specific includes folder., subsequent to compiling
-gulp.task('clean', async function(company) {
+gulp.task('cleanCommon', async function() {
   companies.forEach(company => {
-    return del(['src/includes/' + company + '/common/**', '!src/includes/' + company + '/common'])
+    return del([`src/includes/${company}/common/*.mjml`, `!src/includes/${company}/common`])
   })
 })
 
@@ -49,7 +49,14 @@ gulp.task('commonCompile', async function () {
 })
 
 // Glob task for copying, compiling, and deleting common templates
-gulp.task('asdf', gulp.series('copyFiles','commonCompile','clean'))
+gulp.task('common', gulp.series('copyFilesCommon', 'commonCompile', 'cleanCommon'))
+
+// Task for optimizing images
+gulp.task('images', function () {
+  return gulp.src(path.images)
+    .pipe(imagemin())
+    .pipe(gulp.dest(path.imageDest))
+})
 
 // Task for compiling specific templates and moving to the public folder under a folder corresponding to the respective company. Specific templates are one-off templates that are proprietary to a specific company.
 // e.g.
@@ -57,9 +64,49 @@ gulp.task('asdf', gulp.series('copyFiles','commonCompile','clean'))
 //         | /advisar
 //                 | template.html
 
-/*gulp.task('specificCompile', function () {
+// This task copies all of the common templates into the company-specific includes folder
+gulp.task('copyFilesSpecific', async function() {
+  companies.forEach(company => {
+    return gulp
+      .src(`src/specific/${company}/*.mjml`)
+      .pipe(gulp.dest(`src/includes/${company}/specific`))
+  })
+})
 
-})*/
+// This task deletes the copied common templates in the company-specific includes folder., subsequent to compiling
+gulp.task('cleanSpecific', async function() {
+  companies.forEach(company => {
+    return del([`src/includes/${company}/specific/*.mjml`, `!src/includes/${company}/specific`])
+  })
+})
+
+// Compile all common templates that were copied into the includes folder
+gulp.task('specificCompile', async function () {
+  companies.forEach(company => {
+    return gulp.src(`src/includes/${company}/specific/**/*.mjml`)
+      .pipe(mjml())
+      .pipe(gulp.dest('public/' + company + '/'))
+  })
+})
+
+// Glob task for copying, compiling, and deleting common templates
+gulp.task('common', gulp.series('copyFilesCommon', 'commonCompile'))
+gulp.task('specific', gulp.series('copyFilesSpecific', 'specificCompile'))
+
+gulp.task('cleanPublic', async function () {
+  return del([`public/**`, `!public`])
+})
+
+gulp.task('clean', gulp.parallel('cleanCommon', 'cleanSpecific', 'cleanPublic'))
+
+gulp.task('compile', gulp.series('common', 'specific'))
+
+// Task for optimizing images
+gulp.task('images', function () {
+  return gulp.src(path.images)
+    .pipe(imagemin())
+    .pipe(gulp.dest(path.imageDest))
+})
 
 // Task for optimizing images
 /*gulp.task('images', function () {
