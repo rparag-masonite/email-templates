@@ -106,32 +106,13 @@ gulp.task('images', function () {
     .pipe(gulp.dest(path.imageDest))
 })
 
+// Bulk compile task
 gulp.task('compile', gulp.series('common', 'specific', 'images'))
 
-
+// Watch task
 gulp.task('watch', function () {
   gulp.watch(path.mjml, gulp.series('compile', 'compile'));
 })
 
+// Glob task for errything
 gulp.task('default', gulp.series('compile', 'watch'));
-
-
-/*
-gulp.task('compile', function () {
-  return gulp.src(path.mjml)
-    .pipe(mjml())
-    .pipe(gulp.dest(path.public))
-})
-
-gulp.task('images', function () {
-  return gulp.src(path.images)
-    .pipe(imagemin())
-    .pipe(gulp.dest(path.imageDest))
-})
-
-gulp.task('watch', function () {
-  gulp.watch(path.mjml, gulp.series('compile', 'images'));
-})
-
-gulp.task('default', gulp.series('compile','images', 'watch'));
-*/
