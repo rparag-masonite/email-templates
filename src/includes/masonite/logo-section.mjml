@@ -1,0 +1,5 @@
+<mj-section background-color="#FFFFFF">
+  <mj-column>
+    <mj-image width="180px" src="../images/masonite-logo.png" />
+  </mj-column>
+</mj-section>

@@ -1,0 +1,6 @@
+<mj-section background-color="transparent">
+  <mj-column>
+    <mj-image padding="32px 25px 10px 25px" width="140px" src="../images/usawd-subtle.png" />
+    <mj-text mj-class="u-text--footer">© 2019 USA Wood Door™ All Rights Reserved</mj-text>
+  </mj-column>
+</mj-section>

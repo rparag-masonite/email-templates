@@ -1,0 +1,73 @@
+<mjml>
+  <mj-head>
+   <mj-include path="../header.mjml" />
+  </mj-head>
+  <mj-body>
+  <mj-section background-color="transparent"></mj-section>
+  <mj-include path="../logo-section.mjml" />
+    <mj-section mj-class="header__primary">
+    <mj-column>
+      <mj-text mj-class="u-text--subtitle">Contact Us</mj-text>
+      <mj-text mj-class="u-text--title">Thank you for contacting Advisar</mj-text>
+      <mj-image width="200px" src="./images/email__contact.png" />
+      <mj-text align="center" mj-class="u-text--multi">A customer service representative will be in touch with you shortly.
+      </mj-text>
+      <mj-table mj-class="table">
+          <tr style="border: 1px solid #C6C6C6; margin-bottom: 10px;">
+            <td style="padding: 10px;">
+              <span style="color:#65758C">First Name:</span><br />
+              <span style="font-weight: 400; font-size: 16px; color: #000000;">test</span>
+            </td>
+          </tr>
+          <tr style="border: 1px solid #C6C6C6; margin-bottom: 10px;">
+            <td style="padding: 10px;">
+              <span style="color:#65758C">Last Name:</span><br />
+              <span style="font-weight: 400; font-size: 16px; color: #000000;">test</span>
+            </td>
+          </tr>
+          <tr style="border: 1px solid #C6C6C6; margin-bottom: 10px;">
+            <td style="padding: 10px;">
+              <span style="color:#65758C">Email:</span><br />
+              <span style="font-weight: 400; font-size: 16px; color: #000000;">jlutz@masonite.com</span>
+            </td>
+          </tr>
+          <tr style="border: 1px solid #C6C6C6; margin-bottom: 10px;">
+            <td style="padding: 10px;">
+              <span style="color:#65758C">Company Name:</span><br />
+              <span style="font-weight: 400; font-size: 16px; color: #000000;">test</span>
+            </td>
+          </tr>
+          <tr style="border: 1px solid #C6C6C6; margin-bottom: 10px;">
+            <td style="padding: 10px;">
+              <span style="color:#65758C">City:</span><br />
+              <span style="font-weight: 400; font-size: 16px; color: #000000;">Tampa</span>
+            </td>
+          </tr>
+          <tr style="border: 1px solid #C6C6C6; margin-bottom: 10px;">
+            <td style="padding: 10px;">
+              <span style="color:#65758C">State:</span><br />
+              <span style="font-weight: 400; font-size: 16px; color: #000000;">FL</span>
+            </td>
+          </tr>
+          <tr style="border: 1px solid #C6C6C6; margin-bottom: 10px;">
+            <td style="padding: 10px;">
+              <span style="color:#65758C">Zip:</span><br />
+              <span style="font-weight: 400; font-size: 16px; color: #000000;">33611</span>
+            </td>
+          </tr>
+          <tr style="border: 1px solid #C6C6C6; margin-bottom: 10px;">
+            <td style="padding: 10px;">
+              <span style="color:#65758C">Primary Interest:</span><br />
+              <span style="font-weight: 400; font-size: 16px; color: #000000;">Other order related issue.</span>
+            </td>
+          </tr>
+          <tr style="border: 1px solid #95A4B9; background: #EAF0F6; margin-bottom: 10px; color: #414B5E;">
+            <td style="color:#000000; font-weight: 700; padding: 12px;"><span style="color: #65758C;">Additional Information:</span><br />test</td>
+          </tr>
+        </mj-table>
+
+    </mj-column>
+    </mj-section>
+    <mj-include path="../footer.mjml" />
+  </mj-body>
+</mjml>
