@@ -1,7 +1,13 @@
 # Application Emails with MJML
 
 ## What is this project?
-This repository is a lightweight starter project that may help compile multiple MJML files into static HTML emails at once. Rather than continuously use the command line to compile each file, this project may help manage compile all the files located in the `src` folder.
+This repository a collection of branded MJML email templates that are used across multiple applications. Many of our companies share the same messaging, so why not the same template (__albeit with a few simple style changes__)? This build let's us create common and company-specific templates without the painstaking one-off changes.
+
+#### Features
+- **Simple:** We're using MJML to build emails, so things are modular and semantic
+- **Usable:** Tested across dozens of devices, browsers, and email clients to ensure consistency and usability.
+- **Modular:** Pick from a library of components to add into any system
+- **Custom:** Add a new company without creating brand new templates manually.
 
 The architecture of this project helps compile templates for multiple brands that may utilize the same body template.
 
