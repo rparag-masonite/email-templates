@@ -14,7 +14,8 @@ const path = {
 const companies = [
   'advisar',
   'usawd',
-  'masonite'
+  'masonite',
+  'gbs'
 ]
 
 // Task for compiling common templates and moving to the public folder under a folder corresponding to the respective company. Common templates are email templates that every compnany in the list will use.
